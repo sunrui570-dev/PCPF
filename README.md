@@ -2,6 +2,7 @@
 
 ## Brief
 This is the implementation of paper: Towards Robust UDA Semantic Segmentation with Finer Prototype Construction and Pseudo-Label Filtering
+<span style="color:gray;">⚠ Note: The source code is currently incomplete and will be fully released once the manuscript is accepted by the journal.</span>
 
 ## Overview Framework
 <img src="resources/overview.png" width="900">
@@ -62,13 +63,10 @@ python -m tools.test ${CONFIG_FILE} ${CHECKPOINT_FILE} --show-dir ${SHOW_DIR}_HR
 ## Results
 <img src="resources/results1.png" width="1200">
 
-## Acknowledgements
+## License & Acknowledgements
+We are very grateful for these excellent works: [MIC](https://github.com/lhoyer/MIC),[HRDA](https://github.com/lhoyer/HRDA),[DAFormer](https://github.com/lhoyer/DAFormer),[MMSegmentation](https://github.com/open-mmlab/mmsegmentation),[SegFormer](https://github.com/NVlabs/SegFormer),[DACS](https://github.com/vikolss/DACS). Please follow their respective licenses for usage and redistribution. Thanks for their awesome works.
 
-PCPR is based on the following open-source projects. We thank their
-authors for making the source code publicly available.
-* [MIC](https://github.com/lhoyer/MIC)
-* [HRDA](https://github.com/lhoyer/HRDA)
-* [DAFormer](https://github.com/lhoyer/DAFormer)
-* [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
-* [SegFormer](https://github.com/NVlabs/SegFormer)
-* [DACS](https://github.com/vikolss/DACS)
+## Contact
+Feel free to contact me if there is any question. (Rui Sun: sunrui44509@163.com, Lei Huang: huangl@ouc.edu.cn)
+
+
