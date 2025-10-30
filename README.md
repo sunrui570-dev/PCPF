@@ -68,6 +68,6 @@ python -m tools.test ${CONFIG_FILE} ${CHECKPOINT_FILE} --show-dir ${SHOW_DIR}_HR
 We are very grateful for these excellent works: [MIC](https://github.com/lhoyer/MIC),[HRDA](https://github.com/lhoyer/HRDA),[DAFormer](https://github.com/lhoyer/DAFormer),[MMSegmentation](https://github.com/open-mmlab/mmsegmentation),[SegFormer](https://github.com/NVlabs/SegFormer),[DACS](https://github.com/vikolss/DACS). Please follow their respective licenses for usage and redistribution. Thanks for their awesome works.
 
 ## Contact
-Feel free to contact me if there is any question. (Rui Sun: sunrui4509@163.com, Lei Huang: huangl@ouc.edu.cn)
+Feel free to contact me if there is any question. (Rui Sun: sunrui4509@163.com)
 
 
