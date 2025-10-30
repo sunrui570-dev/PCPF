@@ -1,0 +1,29 @@
+name: Unzip PCPR
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'PCPR.zip'
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Unzip PCPR.zip
+        run: |
+          mkdir -p extracted
+          unzip -o PCPR.zip -d extracted
+
+      - name: Commit and push extracted files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          cp -r extracted/* .
+          rm -rf extracted PCPR.zip
+          git add .
+          git commit -m "Unzipped PCPR.zip automatically"
+          git push
