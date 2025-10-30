@@ -7,7 +7,7 @@ on:
       - 'PCPR.zip'
 
 permissions:
-  contents: write   
+  contents: write
 
 jobs:
   unzip:
@@ -22,6 +22,12 @@ jobs:
         run: |
           mkdir -p extracted
           unzip -o PCPR.zip -d extracted
+          # 检查是否存在 extracted/PCPR 子目录（多了一层）
+          if [ -d "extracted/PCPR" ]; then
+            echo "Detected nested PCPR directory, moving files up..."
+            mv extracted/PCPR/* extracted/
+            rm -rf extracted/PCPR
+          fi
 
       - name: Commit and push extracted files
         run: |
@@ -31,8 +37,8 @@ jobs:
           rm -rf extracted PCPR.zip
           git add .
           if git diff --cached --quiet; then
-            echo " No changes to commit."
+            echo "✅ No changes to commit."
           else
-            git commit -m "Unzipped PCPR.zip automatically"
+            git commit -m "Unzipped PCPR.zip and moved files to root"
             git push
           fi
