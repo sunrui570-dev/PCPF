@@ -33,16 +33,13 @@ from their [OneDrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/xiee
 
 ## Dataset Setup
 
-**Cityscapes:** Please, download leftImg8bit_trainvaltest.zip and
-gt_trainvaltest.zip from [here](https://www.cityscapes-dataset.com/downloads/)
-and extract them to `data/cityscapes`.
+|      |  Dataset   | Download Link                                                |
+| :--: | :--------: | ------------------------------------------------------------ |
+|  1   | Cityscapes | [Link](https://www.cityscapes-dataset.com/downloads/)        |
+|  2   |    GTA     | [Link](https://download.visinf.tu-darmstadt.de/data/from_games/) |
+|  3   |  Synthia   | [Link](http://synthia-dataset.net/downloads/)                |
 
-**GTA:** Please, download all image and label packages from
-[here](https://download.visinf.tu-darmstadt.de/data/from_games/) and extract
-them to `data/gta`.
 
-**Synthia (Optional):** Please, download SYNTHIA-RAND-CITYSCAPES from
-[here](http://synthia-dataset.net/downloads/) and extract it to `data/synthia`.
 
 
 ## Training
