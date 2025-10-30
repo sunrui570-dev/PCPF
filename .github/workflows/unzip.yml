@@ -2,9 +2,6 @@ name: Unzip PCPR
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'PCPR.zip'
 
 permissions:
   contents: write
@@ -21,10 +18,9 @@ jobs:
       - name: Unzip PCPR.zip
         run: |
           mkdir -p extracted
+          # 修改这里路径，根据 PCPR.zip 实际位置
           unzip -o PCPR.zip -d extracted
-          # 检查是否存在 extracted/PCPR 子目录（多了一层）
           if [ -d "extracted/PCPR" ]; then
-            echo "Detected nested PCPR directory, moving files up..."
             mv extracted/PCPR/* extracted/
             rm -rf extracted/PCPR
           fi
@@ -34,7 +30,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           cp -r extracted/* .
-          rm -rf extracted PCPR.zip
+          rm -rf extracted PCPR/PCPR.zip
           git add .
           if git diff --cached --quiet; then
             echo "✅ No changes to commit."
