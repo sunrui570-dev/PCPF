@@ -6,12 +6,17 @@ on:
     paths:
       - 'PCPR.zip'
 
+permissions:
+  contents: write   
+
 jobs:
   unzip:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Unzip PCPR.zip
         run: |
@@ -25,5 +30,9 @@ jobs:
           cp -r extracted/* .
           rm -rf extracted PCPR.zip
           git add .
-          git commit -m "Unzipped PCPR.zip automatically"
-          git push
+          if git diff --cached --quiet; then
+            echo " No changes to commit."
+          else
+            git commit -m "Unzipped PCPR.zip automatically"
+            git push
+          fi
