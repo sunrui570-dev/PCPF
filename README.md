@@ -57,10 +57,10 @@ python -m tools.test ${CONFIG_FILE} ${CHECKPOINT_FILE} --show-dir ${SHOW_DIR}_HR
 ```
 
 ## Results
-<img src="resources/result2.png.png" width="900">
+<img src="resources/result2.png" width="900">
 
 ## Results
-<img src="resources/results1.png.png" width="1200">
+<img src="resources/results1.png" width="1200">
 
 ## Acknowledgements
 
