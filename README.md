@@ -17,8 +17,8 @@ Cuda version 11.0.3
 1. Create Conda Environment
 
 ```shell
-conda create --name pcpr python=3.8.5
-conda activate pcpr
+conda create --name pcpf python=3.8.5
+conda activate pcpf
 ```
 
 2. The requirements can be installed with:
@@ -45,7 +45,7 @@ from their [OneDrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/xiee
 ## Training
 
 ```shell
-python run_experiments.py --config configs/pcpr/gtaHR2csHR_pcpr.py
+python run_experiments.py --config configs/pcpf/gtaHR2csHR_pcpf.py
 ```
 
 The logs and checkpoints are stored in `work_dirs/`.
